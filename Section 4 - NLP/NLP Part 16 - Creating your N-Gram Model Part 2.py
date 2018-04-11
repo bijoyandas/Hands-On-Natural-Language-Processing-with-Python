@@ -27,7 +27,7 @@ currentGram = ' '.join(words[0:n])
 result = currentGram
 for i in range(30):
     if currentGram not in ngrams.keys():
-        break;
+        break
     possibilities = ngrams[currentGram]
     nextItem = possibilities[random.randrange(len(possibilities))]
     result += ' '+nextItem
