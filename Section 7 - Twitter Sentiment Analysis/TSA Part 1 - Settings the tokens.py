@@ -10,7 +10,8 @@ import pickle
 from tweepy import OAuthHandler
 
 #Please change with your own consumer key, consumer secret, access token and access secret
-consumer_key = 'PglM3T2NoBzq0ktWTUBelJTHg'
-consumer_secret = 'aDKWrqZQAwje0fJBBVufrxJWE5KY3T8cSlUUGuRyvuvYznGQOC'
-access_token = '624310916-N9aUtUrr1BjnNhOPV6vPz0Aty1OZ1utIyF3hm4Cm'
-access_secret = 'VyJCNbvceb6RpPXRLVo8e2sysJXwQ59AEc9KAQfQfNRoO'
+# Initializing the keys
+consumer_key = 'yoIwFkjZGYDa49aO16XqSNqcN'
+consumer_secret = 'gl4LQOItV7Z1aFwNrlvaiKJ3t8o8h99blMIAmnmdHxYjzjRAxO' 
+access_token = '624310916-E7fDF2IE8P6bfY1oVFglASf6F8RnxMd3vgSXFqnZ'
+access_secret ='ID9JcoXHsDcKtvNcnmBGcCQhUlO0wmwAxBJ6LCesiUAas'
