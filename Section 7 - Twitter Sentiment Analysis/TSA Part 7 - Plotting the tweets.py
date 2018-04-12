@@ -36,7 +36,9 @@ with open('classifier.pickle','rb') as f:
 with open('tfidfmodel.pickle','rb') as f:
     tfidf = pickle.load(f)    
     
-sent_tweets = []    
+total_pos = 0
+total_neg = 0
+
 # Preprocessing the tweets and predicting sentiment
 for tweet in list_tweets:
     tweet = re.sub(r"^https://t.co/[a-zA-Z0-9]*\s", " ", tweet)
@@ -67,9 +69,20 @@ for tweet in list_tweets:
     tweet = re.sub(r"^[a-z]\s+"," ",tweet)
     tweet = re.sub(r"\s+"," ",tweet)
     sent = classifier.predict(tfidf.transform([tweet]).toarray())
-    sent_tweets.append(sent)
+    if sent[0] == 1:
+        total_pos += 1
+    else:
+        total_neg += 1
     
 # Visualizing the results
-plt.plot(sent_tweets)
-plt.y_label('sentiment')
+import matplotlib.pyplot as plt
+import numpy as np
+objects = ['Positive','Negative']
+y_pos = np.arange(len(objects))
+
+plt.bar(y_pos,[total_pos,total_neg],alpha=0.5)
+plt.xticks(y_pos,objects)
+plt.ylabel('Number')
+plt.title('Number of Postive and NEgative Tweets')
+
 plt.show()
