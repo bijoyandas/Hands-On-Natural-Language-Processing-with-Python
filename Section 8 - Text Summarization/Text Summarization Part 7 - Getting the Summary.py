@@ -56,7 +56,7 @@ for sentence in sentences:
         if word in word2count.keys():
             if len(sentence.split(' ')) < 25:
                 if sentence not in sent2score.keys():
-                    sent2score[sentence] = 0
+                    sent2score[sentence] = word2count[word]
                 else:
                     sent2score[sentence] += word2count[word]
                     
