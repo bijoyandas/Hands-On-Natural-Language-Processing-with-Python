@@ -24,7 +24,6 @@ text = re.sub(r'\[[0-9]*\]',' ',text)
 text = re.sub(r'\s+',' ',text)
 text = text.lower()
 text = re.sub(r'\d',' ',text)
-text = nltk.word_tokenize()
 text = re.sub(r'\s+',' ',text)
 
 # Preparing the dataset
