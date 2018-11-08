@@ -45,9 +45,10 @@ for word in nltk.word_tokenize(clean_text):
             word2count[word] += 1
 
 # Converting counts to weights
+max_count = max(word2count.values())
 for key in word2count.keys():
-    word2count[key] = word2count[key]/max(word2count.values())
-    
+    word2count[key] = word2count[key]/max_count    
+
 # Product sentence scores    
 sent2score = {}
 for sentence in sentences:
